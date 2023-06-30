@@ -230,7 +230,7 @@ int findCountOfInstructions(FILE* inputFile)
     while(fgets(line,lineSize,inputFile)!=NULL)
     {
         if(line[0]=='\n')
-            break;
+            continue;
         lineNo++;
     }
     free(line);
@@ -248,7 +248,7 @@ void fillInstructions(FILE* inputFile,int size,instruction* instructionArr)
      while(fgets(line,lineSize,inputFile)!=NULL)
      {
          if(line[0]=='\n')
-             break;
+             continue;
          for(int k=0;k<strlen(line);k++)
             if(line[k]=='\n')
                 line[k]=NULL;
