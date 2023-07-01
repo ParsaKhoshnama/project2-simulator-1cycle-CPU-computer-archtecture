@@ -69,7 +69,6 @@ int main(int argc, char *argv[])
         printf("register[%i]= %i\n",i,registers[i]);
     }
     printf("------------------------------------\n\n\n");
-
     printf("data memory: \n");
     for(int i=0;i<65536;i++)
     {
@@ -329,7 +328,6 @@ void findDirectives(int size,instruction* instructionsArr)
 void doInstructions(int size,instruction* instructionArr)
 {
     int rd,rs,rt;
-    int first12bits;
     short imm;
     char hexcode[9];
     char temp[5];
