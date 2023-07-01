@@ -281,16 +281,6 @@ void findDirectives(int size,instruction* instructionsArr)
             continue;
               }
         }
-      //  temp[0]=hexcode[5];
-      //  temp[1]=hexcode[6];
-       // temp[2]=hexcode[7];
-       // temp[3]='\0';
-      //  if(temp[0]=='8' || temp[0]=='9' ||(temp[0]>='A' && temp[0]<='F')||(temp[0]>='a' && temp[0]<='f'))
-       // {
-       //     number=calculateIMM(temp);
-      //  }
-      //  else
-        //   number=hex2int(temp);
         if(flag)
         {
             temp[0]=hexcode[1];
@@ -301,6 +291,7 @@ void findDirectives(int size,instruction* instructionsArr)
             temp[1]=hexcode[5];
             temp[2]=hexcode[6];
             temp[3]=hexcode[7];
+            temp[4]='\0';
             if(temp[0]=='8' || temp[0]=='9' ||(temp[0]>='A' && temp[0]<='F')||(temp[0]>='a' && temp[0]<='f'))
              {
                 number=calculateIMM(temp);
